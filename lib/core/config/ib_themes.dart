@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PmThemes {
+class IbThemes {
   // 默认主题
   static ThemeData defaultTheme = ThemeData(
     brightness: Brightness.light,

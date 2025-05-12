@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'dart:ui';
 
-class PmScreen {
+class IbScreen {
   static double? physicalWidth;
   static double? physicalHeight;
   static double? screenWidth;

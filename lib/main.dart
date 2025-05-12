@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:play_music/core/config/pm_i18n.dart';
-import 'package:play_music/core/config/pm_main.dart';
-import 'package:play_music/pages/pm_routes.dart';
-import 'package:play_music/core/config/pm_themes.dart';
+import 'package:ib/core/config/ib_i18n.dart';
+import 'package:ib/core/config/ib_main.dart';
+import 'package:ib/pages/ib_routes.dart';
+import 'package:ib/core/config/ib_themes.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,19 +22,19 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       navigatorKey: navigatorKey,
       title: 'Music Play',
-      supportedLocales: PmI18n.supportedLocales,
-      localizationsDelegates: PmI18n.localizationsDelegates,
-      theme: PmThemes.defaultTheme,
-      darkTheme: PmThemes.darkTheme,
-      routes: PmRoutes.routes,
-      initialRoute: PmRoutes.initialRoute,
-      onUnknownRoute: PmRoutes.unknownRoute,
+      supportedLocales: IbI18n.supportedLocales,
+      localizationsDelegates: IbI18n.localizationsDelegates,
+      theme: IbThemes.defaultTheme,
+      darkTheme: IbThemes.darkTheme,
+      routes: IbRoutes.routes,
+      initialRoute: IbRoutes.initialRoute,
+      onUnknownRoute: IbRoutes.unknownRoute,
       builder: (context, child) {
         /// 语言国际化
-        PmMain.locale(context);
+        IbMain.locale(context);
 
         /// 登出处理
-        PmMain.logout();
+        IbMain.logout();
         return child!;
       },
     );

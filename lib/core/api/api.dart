@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
-import 'package:play_music/core/event_bus.dart';
-import 'package:play_music/core/secure_storage.dart';
+import 'package:ib/core/event_bus.dart';
+import 'package:ib/core/secure_storage.dart';
 
 class Api {
   // 单例模式

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:play_music/core/extension/pm_string.dart';
-import 'package:play_music/widget/pm_appbar/pm_appbar_view.dart';
+import 'package:ib/core/extension/ib_string.dart';
+import 'package:ib/widget/ib_appbar/ib_appbar_view.dart';
 
-class PmHomePage extends StatelessWidget {
+class IbHomePage extends StatelessWidget {
   static const String routeName = "/";
 
-  const PmHomePage({super.key});
+  const IbHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return PmAppbarPage(
+    return IbAppbarPage(
       child: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -36,7 +36,7 @@ class PmHomePage extends StatelessWidget {
           TextButton(
               child: const Text("跳转测试"),
               onPressed: () {
-                // Navigator.of(context).pushNamed(PmHome.routeName);
+                // Navigator.of(context).pushNamed(IbHome.routeName);
               }),
         ],
       )),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:play_music/core/config/pm_i18n.dart';
-import 'package:play_music/core/event_bus.dart';
-import 'package:play_music/pages/home/pm_home_page.dart';
+import 'package:ib/core/config/ib_i18n.dart';
+import 'package:ib/core/event_bus.dart';
+import 'package:ib/pages/home/ib_home_page.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
-class PmMain {
+class IbMain {
   // 监听语言变化
   static Locale? _currentLocale;
 
@@ -15,7 +15,7 @@ class PmMain {
     // 如果语言变化，强制退出应用
     if (_currentLocale != null && _currentLocale != newLocale) {
       navigatorKey.currentState?.pushNamedAndRemoveUntil(
-        PmHomePage.routeName,
+        IbHomePage.routeName,
         (route) => false, // 清空所有页面
       );
     }
@@ -33,7 +33,7 @@ class PmMain {
     EventBus.instance.addListener<String>(EventKeys.logout, (data) {
       // 使用 navigatorKey 进行页面跳转，清空历史页面栈
       navigatorKey.currentState?.pushNamedAndRemoveUntil(
-        PmHomePage.routeName,
+        IbHomePage.routeName,
         (route) => false, // 清空所有页面
       );
     });

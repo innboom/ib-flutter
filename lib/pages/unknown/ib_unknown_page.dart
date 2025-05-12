@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class PmUnknownPage extends StatelessWidget {
+class IbUnknownPage extends StatelessWidget {
   static const String routeName = "/unknown";
 
-  const PmUnknownPage({super.key});
+  const IbUnknownPage({super.key});
 
   @override
   Widget build(BuildContext context) {

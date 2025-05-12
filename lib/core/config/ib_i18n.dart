@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-class PmI18n {
+class IbI18n {
   static List<Locale> supportedLocales = [
     const Locale('zh', 'CN'), // 简体中文
     const Locale('ja', 'JP'), // 日语
@@ -48,7 +48,7 @@ class PmI18n {
 class IntlHost {
   Locale? locale;
   Locale? fallbackLocale = const Locale('en', 'US'); // 默认回退语言是英语
-  Map<String, Map<String, String>> translations = PmI18n.msg;
+  Map<String, Map<String, String>> translations = IbI18n.msg;
 
   // 私有构造函数
   IntlHost._();

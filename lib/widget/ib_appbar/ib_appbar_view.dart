@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'pm_appbar_bloc.dart';
-import 'pm_appbar_event.dart';
-import 'pm_appbar_state.dart';
+import 'ib_appbar_bloc.dart';
+import 'ib_appbar_event.dart';
+import 'ib_appbar_state.dart';
 
-class PmAppbarPage extends StatefulWidget {
+class IbAppbarPage extends StatefulWidget {
   final Widget child;
   final Widget? title; // 这里是可选的
 
   // 构造函数修改为命名参数
-  const PmAppbarPage(
+  const IbAppbarPage(
       {Key? key, required this.child, this.title = const Text("MUSICE")})
       : super(key: key);
 
   @override
-  _PmAppbarPageState createState() => _PmAppbarPageState();
+  _IbAppbarPageState createState() => _IbAppbarPageState();
 }
 
-class _PmAppbarPageState extends State<PmAppbarPage> {
+class _IbAppbarPageState extends State<IbAppbarPage> {
   // 创建一个 GlobalKey 用于控制 Scaffold
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext context) => PmAppbarBloc()..add(InitEvent()),
+      create: (BuildContext context) => IbAppbarBloc()..add(InitEvent()),
       child: Scaffold(
         key: _scaffoldKey, // 使用 GlobalKey 给 Scaffold 添加一个 key
         appBar: _buildAppBar(context),
